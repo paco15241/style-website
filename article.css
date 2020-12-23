@@ -1,0 +1,111 @@
+
+section.articles {
+  width: 100%;
+  background-color: #F8FEFF;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section.articles > .article {
+  max-width: 1200px;
+  margin: 0 40px;
+  border: 1px solid #CBD1D1;
+  display: flex;
+}
+
+section.articles > .spacer {
+  height: 80px;
+  box-sizing: border-box;
+}
+
+/* section.articles > .article > .picture */
+section.articles > .article > .picture {
+  width: 50%;
+  height: 400px;
+  box-sizing: border-box;
+  opacity: 0.8;
+  transition: opacity 0.5s;
+}
+
+section.articles > .article > .picture:hover {
+  opacity: 1;
+}
+
+section.articles > .article > .picture-1 {
+  background-image: url(article-1.jpg);
+  background-size: cover;
+}
+
+section.articles > .article > .picture-2 {
+  background-image: url(article-2.jpg);
+  background-size: cover;
+}
+
+/* section.articles > .article > .text */
+section.articles > .article > .text {
+  width: 50%;
+  /* height: 400px; */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+section.articles > .article > .text > .title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+section.articles > .article > .text > .subtitle {
+  color: #989B9A;
+  line-height: 1.5em;
+  
+}
+
+section.articles > .article > .text > hr {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+section.articles > .article > .text > .views {
+  color: #989B9A;
+  font-size: 0.8em;
+  margin-right: 20px;;
+}
+
+section.articles > .article > .text > .comment {
+  color: #989B9A;
+  font-size: 0.8em;
+}
+
+
+/* 螢幕尺寸小於 800px，套用以下設定 */
+@media (max-width: 800px) {
+  section.articles > .article {
+    flex-wrap: wrap;
+  }
+  section.articles > .article > .picture {
+    width: 100%;
+    height: 300px;
+    background-position: 20% center;
+  }
+  section.articles > .article > .text {
+    width: 100%;
+    /* height: 300px; */
+  }
+
+  section.articles {
+    padding: 40px 0;
+  }
+  section.articles > .spacer {
+    height: 40px;
+  }
+
+  section.articles > .article > .text > .title {
+    font-size: 1.5em;
+  }
+  section.articles > .article > .text > .subtitle {
+    line-height: 1em;
+  }
+}
